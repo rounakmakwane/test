@@ -1,8 +1,5 @@
-version: 2.1
-workflows:
-  deploy_application:
-    jobs:
-      - ssh-deployment/deploy:
-          ssh-host: 52.66.197.30
-          ssh-user: ubuntu
-          run-command: mkdir test
+deployment:
+  production:
+    branch: master
+    commands:
+      - mkdir test username@52.66.197.30:/
