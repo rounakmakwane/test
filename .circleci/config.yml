@@ -1,6 +1,8 @@
 version: 2
 jobs:
   build:
+    docker:
+      - image: circleci/<language>:<version TAG>
     steps:
       - run:
           name: Deploy Over SSH
