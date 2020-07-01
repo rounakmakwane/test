@@ -9,7 +9,7 @@ jobs:
       - run:
           name: Deploy Over SSH
           command: |
-            ssh ubuntu@13.232.242.124 "mkdir test"
+            ssh -vvv ubuntu@13.232.242.124 "mkdir test"
 workflows:
   version: 2
   build_and_test:
