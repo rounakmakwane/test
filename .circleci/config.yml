@@ -3,13 +3,13 @@ jobs:
   build:
     machine: true
     steps:
-      - add_ssh_keys:
-          fingerprints:
-            - "ff:4f:70:f0:90:f3:48:62:bc:b5:d8:db:a0:50:89:c2"
+#      - add_ssh_keys:
+ #         fingerprints:
+  #          - "ff:4f:70:f0:90:f3:48:62:bc:b5:d8:db:a0:50:89:c2"
       - run:
           name: Deploy Over SSH
           command: |
-            ssh -vvv ubuntu@13.232.242.124 "cd ci/ap/ && mkdir hello"
+            ssh -vvv ubuntu@13.232.242.124 "cd ci/ap/ && mkdir hello2"
 workflows:
   version: 2
   build_and_test:
