@@ -9,11 +9,11 @@ jobs:
       - run:
           name: Deploy Over SSH
           command: |
-            ssh -vvv ubuntu@52.66.65.62 "cd ci/ap/ &&  sudo git pull https://9efdf5cfaa61d7a979f87bd9724b47778c9cb73d:x-oauth-basic@github.com/rounakmakwane/test.git && sudo chown -R ubuntu:www-data ci/ap/"
+            ssh -vvv ubuntu@52.66.65.62 "cd ci/ap/ &&  sudo git pull https://9efdf5cfaa61d7a979f87bd9724b47778c9cb73d:x-oauth-basic@github.com/rounakmakwane/test.git && sudo chown -R ubuntu:www-data /home/ubuntu/ci/ap/"
       - run:
           name: Deploy Over SSH
           command: |
-            ssh -vvv ubuntu@13.232.242.124 "cd ci/ap/ &&  sudo git pull https://9efdf5cfaa61d7a979f87bd9724b47778c9cb73d:x-oauth-basic@github.com/rounakmakwane/test.git && sudo chown -R ubuntu:www-data ci/ap/"
+            ssh -vvv ubuntu@13.232.242.124 "cd ci/ap/ &&  sudo git pull https://9efdf5cfaa61d7a979f87bd9724b47778c9cb73d:x-oauth-basic@github.com/rounakmakwane/test.git && sudo chown -R ubuntu:www-data /home/ubuntu/ci/ap/"
 workflows:
   version: 2
   build_and_test:
